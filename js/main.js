@@ -27,13 +27,13 @@ $(document).ready(function()
                 $.each(repos, function(index, repo)
                 {
                     $('#repos').append(`
-                        <div class="well" style="margin: 10px; ">
+                        <div class="well">
                             <div class="row">
-                                <div class="col-md-7">
+                                <div class="col-md-10">
                                     <strong> ${repo.name} </strong>: ${repo.description}
                                 </div>
                                 <div class="col-md-2">
-                                    <a href="${repo.html_url}" target="_blank" class="btn btn-dark">Repo Page</a>
+                                    <a href="${repo.html_url}" style="margin: 5px;" target="_blank" class="btn btn-dark">Repo Page</a>
                                 </div>
                             </div>
                         </div>
@@ -54,11 +54,11 @@ $(document).ready(function()
                                 
                                 <a target="_blank" class="btn btn-primary btn-block" style="margin-top: 20px;" href="${user.html_url}">View Profile</a>
                             </div>
-                            <div class=""col-md-9"">
-                                <span class="btn btn-dark">Public Repos: ${user.public_repos}</span>
-                                <span class="btn btn-primary">Public Gists: ${user.public_gists}</span>
-                                <span class="btn btn-success">Followers: ${user.followers}</span>
-                                <span class="btn btn-info">Following: ${user.following}</span>   
+                            <div class="col-md-9">
+                                <span class="btn btn-dark margin-fix">Public Repos: ${user.public_repos}</span>
+                                <span class="btn btn-primary margin-fix">Public Gists: ${user.public_gists}</span>
+                                <span class="btn btn-success margin-fix">Followers: ${user.followers}</span>
+                                <span class="btn btn-info margin-fix">Following: ${user.following}</span>   
                                 <br><br>            
 
                                 <ul class="list-group">
