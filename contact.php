@@ -1,3 +1,60 @@
+<?php
+
+  if(isset($_POST['submit']))
+  {
+
+    $to      = 'azimjon.6561@gmail.com';
+    $subject = 'the subject';
+    $message = 'hello';
+    $headers = 'From: webmaster@yourdomain.com' . "\r\n" .
+       'Reply-To: webmaster@yourdomain.com';
+    
+    mail($to, $subject, $message, $headers);
+
+      // $sender = "name of sender: " . $_POST['sender'];
+      // $sender .= "email of sender: " . $_POST['email'];
+      // $subject = "subject of sender" . $_POST['subject'];
+      // $message = "message of sender" . $_POST['message'];
+      // $headers = $sender;
+      // $reciver = $_POST['reciver'];
+      // $to = $reciver;
+      // $body = $message;
+
+      // $mailsent = mail($to, $subject, $body, $headers);
+
+      // echo $mailsent;
+?>
+
+    
+    <?php
+      // if($mailsent)
+      // {
+    ?>
+      <!-- <script>
+        function myFunction() {
+          alert("Thank you for contacting us!");
+        }
+      </script> -->
+    <?php
+      // }
+      // else
+      // {
+    ?>
+      <!-- <script>
+        function myFunction() {
+          alert("Message sending failed Sorry!");
+        }
+      </script> -->
+    <?php
+      // }
+    ?>
+
+<?php
+
+  }
+
+?>
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -15,48 +72,26 @@
                   <form class="form-horizontal" name="theform" action="" method="post">
                     <div class="form-group">
                       <label for="exampleInputName2">Name</label>
-                      <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                      <input type="text" name="sender" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail2">Email</label>
-                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail2">Subject</label>
-                      <input type="text" class="form-control" id="exampleInputEmail2" placeholder="About the meeting">
+                      <input type="text" name="subject" class="form-control" id="exampleInputEmail2" placeholder="About the meeting">
                     </div>
                     <div class="form-group ">
                       <label for="exampleInputText">Your Message</label>
-                     <textarea  class="form-control" rows=5 placeholder="Description"></textarea> 
+                     <textarea  class="form-control" name="message" rows=5 placeholder="Description"></textarea> 
                     </div>
-                    <a type="submit" onclick="myFunction()" class="btn btn-success">Send Message</a>
+                    <input type="submit" onclick="myFunction()" name="submit" Value="Send Message" class="btn btn-success">
+
+                    <input type="hidden" class="form-control" id="exampleInputEmail2" name="reciver" value="azimjonkamolov@zohomail.com">
                   </form>
 
                   <!-- <button onclick="myFunction()">Try it</button> -->
-
-                  <?php
-                    if($val == 1)
-                    {
-                  ?>
-                    <script>
-                      function myFunction() {
-                        alert("Thank you for contacting us!");
-                      }
-                    </script>
-                  <?php
-                    }
-                    else
-                    {
-                  ?>
-                    <script>
-                      function myFunction() {
-                        alert("Message sending failed Sorry!");
-                      }
-                    </script>
-                  <?php
-                    }
-                  ?>
-                  
 
                   <hr>
                     <h3>Our Social Sites</h3>
