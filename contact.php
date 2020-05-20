@@ -9,7 +9,7 @@
     $headers = 'From: webmaster@yourdomain.com' . "\r\n" .
        'Reply-To: webmaster@yourdomain.com';
     
-    mail($to, $subject, $message, $headers);
+    // mail($to, $subject, $message, $headers);
 
       // $sender = "name of sender: " . $_POST['sender'];
       // $sender .= "email of sender: " . $_POST['email'];
@@ -20,33 +20,33 @@
       // $to = $reciver;
       // $body = $message;
 
-      // $mailsent = mail($to, $subject, $body, $headers);
+      $mailsent = mail($to, $subject, $message, $headers);
 
-      // echo $mailsent;
+      echo $mailsent;
 ?>
 
     
     <?php
-      // if($mailsent)
-      // {
+      if($mailsent)
+      {
     ?>
-      <!-- <script>
+      <script>
         function myFunction() {
           alert("Thank you for contacting us!");
         }
-      </script> -->
+      </script>
     <?php
-      // }
-      // else
-      // {
+      }
+      else
+      {
     ?>
-      <!-- <script>
+      <script>
         function myFunction() {
           alert("Message sending failed Sorry!");
         }
-      </script> -->
+      </script>
     <?php
-      // }
+      }
     ?>
 
 <?php
