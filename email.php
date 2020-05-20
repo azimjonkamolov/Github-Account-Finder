@@ -5,8 +5,8 @@
 
         // $to = $_POST['to'];
         // $from = $_POST['from'];
-        $to = "azimjonkamolov@zohomail.com";
-        $from = "From: azimjon.6561@gmail.com";
+        $to = "reciversemail@email.com";
+        $from = "From: sendersemail@gmail.com"; // IN LOCALHOST ONLY REGISTERED PERSONS EMAIL CAN BE HERE
         $subject = $_POST['subject'];
         $message = "<h1>" . $_POST['from'] . "</h1><br>";
         $message .= $_POST['message'];
